@@ -7,18 +7,45 @@ import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 
 import Speaker from '../components/speaker';
+import TEDMenu from '../components/ted-menu.js';
 
-import './speakers.css';
 
 
 class Speakers extends Component {
+    constructor() {
+        super();
+        this.state = {
+            open: false,
+        };
+        
+        this.openMenu = this.openMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
+    }
+    
+	openMenu() {
+		this.setState({ open: true });
+	};
+
+	closeMenu() {
+		this.setState({ open: false });
+	};
+    
 	render() {
 		return (
 
 			<MuiThemeProvider muiTheme={muiTheme}>
                 <div>
                     
-                    <AppBar id="app-bar" title="TEDxUofW 2018" titleStyle={{fontSize: '16px', fontWeight:'bold'}} iconClassNameRight="muidocs-icon-navigation-expand-more" />
+                    <AppBar 
+                        title="TEDxUofW 2018"
+                        titleStyle={{
+                            fontSize: '16px',
+                            fontWeight:'bold',
+                            textAlign: 'center'
+                        }} 
+                        iconClassNameRight="muidocs-icon-navigation-expand-more" 
+                        onLeftIconButtonClick={this.openMenu}
+                    />
 
                     <Paper className={css(styles.paper)} zDepth={0} rounded={false} >
                         <b>2018 Speakers </b>
@@ -39,6 +66,7 @@ class Speakers extends Component {
                         
                         />
  
+                    <TEDMenu open={this.state.open} close={this.closeMenu} />
                 </div>
 			</MuiThemeProvider>
 

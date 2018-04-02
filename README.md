@@ -1,8 +1,9 @@
 # Day-of Conference App - University of Washington
 
-- [ ] Home Page
+- [x] Home Page
 - [x] Speakers Page
 - [ ] Scavenger Hunt
 - [ ] Questions
 
-- [ ] Menu Modal
+- [x] Menu Modal
+- [ ]Firebase Integration
