@@ -1,4 +1,4 @@
-const speakerNames = [
+export const speakerNames = [
     "John Sinclair",
     "Kristi Straus",
     "Fauzia Lala",
