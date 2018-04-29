@@ -41,16 +41,25 @@ class Schedule extends Component {
 				{this.state.currentSpeaker}
 				<div className={css(styles.schedule)} >
 					<Session speakers={[
-						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
-						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
-						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",}
+						{name:"Kristi Straus", talk:"", shift:"-95px", img:"/resources/kristi.png",},
+						{name:"Ansel Santosa", talk:"", shift:"-120px", img:"/resources/ansel.png",},
+						{name:"Heather Evans", talk:"", shift:"-100px", img:"/resources/heather.png",},
+						{name:"Aura", talk:"", shift:"-120px", img:"/resources/ansel.png",},
+						{name:"Dr. Bezruchka", talk:"", shift:"-120px", img:"/resources/bezruchka.jpg",},
+						{name:"John Sinclair", talk:"", shift:"-140px", img:"/resources/john.png",}
 						]}
 					/>
 					<SessionTitle name="lunch" time="Food and drink provided in the lobby." />
 					<Session speakers={[
-						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
-						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
-						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",}
+						{name:"Fauzia Lala", talk:"", shift:"-150px", img:"/resources/fauzia.png",},
+						{name:"Andrea Weatherhead", talk:"", shift:"-140px", img:"/resources/andrea.png",},
+						{name:"Tyler Valentine", talk:"", shift:"-170px", img:"/resources/tyler.png",},
+						{name:"Sarah Myhre", talk:"", shift:"-100px", img:"/resources/sarah.png",},
+						{name:"Jeffery Lew", talk:"", shift:"-150px", img:"/resources/jeffery.png",},
+						{name:"Izdihar Bailey", talk:"", shift:"-130px", img:"/resources/izdihar.png",},
+						{name:"Karen Litfin", talk:"", shift:"-100px", img:"/resources/karen.png",},
+						{name:"Tarah Wheeler", talk:"", shift:"-130px", img:"/resources/tarah.png",},
+						{name:"Jeanne Suchodolski", talk:"", shift:"-70px", img:"/resources/jeanne.png",},
 						]}
 					/>
 				</div>

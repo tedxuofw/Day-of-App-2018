@@ -12,23 +12,28 @@ class SpeakerPreview extends Component {
             position: 'absolute',
             top: ((this.props.shift) ? this.props.shift : '0') ,
         }
+		
+		var style = {opacity:'0'};
+		if (typeof this.props.highlight !== undefined) {
+			if (this.props.highlight) {
+				style = {opacity:'.4'};
+			}
+		}
         
 		return (
                 <div className={css(styles.scheduleItem)}>
-                    <div className={css(styles.scheduleTimeHolder)}>
-                        <div className={css(styles.scheduleTime)}>
-                            {this.props.time}
-                        </div>
-                    </div>
+					
                     <div className={css(styles.scheduleContent)}>
                         <img style={imageStyles} alt={this.props.name} src={this.props.img} />
-
+						
                         <div className={css(styles.overlay)}>
                             <div className={css(styles.scheduleOverlay)}>
                                 <div><b>{this.props.name}</b></div>
                                 <div>{this.props.talk}</div>
                             </div>
                         </div>
+						
+						<div style={style} className={css(styles.cover)}/>
                     </div>
                 </div>
 
@@ -38,34 +43,27 @@ class SpeakerPreview extends Component {
 
 const styles = StyleSheet.create({
     scheduleItem: {
-        height: '75px',
+        height: '55px',
         width: '100%',
-        margin: '10%',
+        marginTop: '4%',
+		marginBottom: '4%',
+		marginLeft: '7%',
+
     },
-    scheduleTimeHolder: {
-        float: 'left',
-        height: '100%',
-        width: '15%',
-        background: 'rgba(230, 43, 37, 1)',
-        
-        color: 'white',
-        fontFamily: 'Avenir',
-        fontSize: '15px',
-        textAlign: 'center',
-        display: 'table',
-    },
-    scheduleTime: {
-        display: 'table-cell',
-        verticalAlign: 'middle'        
-    },
+	cover: {
+		position:'absolute',
+		width:'100%',
+		height:'100%',
+		backgroundColor:'rgba(230, 43, 37, 1)',
+	},
     scheduleContent: {
         position: 'relative',
-        width: '65%',
+        width: '86%',
         height: '100%',
-        marginRight: '10%',
+        marginRight: '7%',
         
         maxHeight: '100%',
-        maxWidth: '65%',
+        maxWidth: '86%',
         overflow: 'hidden',
     }, 
     overlay: {
@@ -90,7 +88,6 @@ const styles = StyleSheet.create({
 
 
 SpeakerPreview.propTypes = {
-    time: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     img : PropTypes.string.isRequired,
     talk: PropTypes.string.isRequired,

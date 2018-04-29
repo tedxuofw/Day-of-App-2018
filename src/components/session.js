@@ -29,13 +29,12 @@ class Session extends Component {
 					name={speaker.name}
 					talk={speaker.talk}
 					time={speaker.time}
+					shift={speaker.shift}
 					img={speaker.img}
-					highlight={index >= slot}
+					highlight={slot >= index}
 					key={Math.random()}
-					shift={slot > 0 ? "0px" : "-40px"} //Only shift first element
 				/>
 			));
-		console.log(speakerPreviews);
 		return (
 			<div>
 				<SessionTitle name="Session 1" time="10:10 AM - 10:49 AM" />

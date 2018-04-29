@@ -17,36 +17,39 @@ class SessionTitle extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-        height: '75px',
+        height: '55px',
         width: '100%',
-        margin: '10%',
+        marginTop: '10%',
+		marginBottom: '4%',
+		marginLeft: '7%',
 	},
 	item: {
 		background: 'rgba(230, 43, 37, 1)',
+		textAlign:'center',
 		position: 'relative',
-        width: '80%',
+        width: '86%',
         height: '100%',
-        marginRight: '10%',
+        marginRight: '7%',
         
         maxHeight: '100%',
-        maxWidth: '80%',
+        maxWidth: '86%',
         overflow: 'hidden',
-		textAlign:'center',
+		
 	},
 	name: {
 		fontFamily: 'Avenir',
         color: 'white',
         fontWeight: 'bold',
-        fontSize: '13px',
+        fontSize: '11px',
 		textTransform:'uppercase',
 		
-		marginTop:'20px',
-		marginBottom:'5px',
+		marginTop:'10px',
+		marginBottom:'2px',
 	},
 	time: {
 		fontFamily: 'Avenir',
         color: 'white',
-        fontSize: '13px',
+        fontSize: '11px',
 		
 		marginTop:'2px',
 		marginBottom:'0px',
