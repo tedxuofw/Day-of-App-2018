@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { StyleSheet, css } from 'aphrodite';
 
 import SpeakerPreview from '../components/preview.js';
 import SpeakerCurrent from '../components/current.js';
+import SessionTitle from '../components/sessiontitle.js';
 
 class Session extends Component {
 	
@@ -36,6 +38,7 @@ class Session extends Component {
 		console.log(speakerPreviews);
 		return (
 			<div>
+				<SessionTitle name="Session 1" time="10:10 AM - 10:49 AM" />
 				{speakerPreviews}
 			</div>
 		);

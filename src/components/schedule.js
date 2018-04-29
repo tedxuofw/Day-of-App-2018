@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 import Session from '../components/session.js';
+import SessionTitle from '../components/sessiontitle.js';
 
 //Each session's start and end time.
 const sessionTimes = [[new Date(2018, 4, 26, 10, 10, 0, 0), new Date(2018, 4, 26, 10, 49, 0, 0)],
@@ -39,6 +40,13 @@ class Schedule extends Component {
 			<div>
 				{this.state.currentSpeaker}
 				<div className={css(styles.schedule)} >
+					<Session speakers={[
+						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
+						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
+						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",}
+						]}
+					/>
+					<SessionTitle name="lunch" time="Food and drink provided in the lobby." />
 					<Session speakers={[
 						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
 						{name:"Erin Jones", talk:"Being a Champion for Change", time:"11:00 AM", img:"http://tedxuofw.com/media/speakers-2017/erin-jones.jpg",},
