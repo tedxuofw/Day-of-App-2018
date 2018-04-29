@@ -1,3 +1,20 @@
+const speakerNames = [
+    "John Sinclair",
+    "Kristi Straus",
+    "Fauzia Lala",
+    "Izdihar Bailey",
+    "Jeanne Suchodolski",
+    "Heather Evans",
+    "Ansel Santosa",
+    "Jeffrey Lew",
+    "Tyler Valentine",
+    "Dr. Steve Bezruchka",
+    "Tarah Wheeler",
+    "Karen Liftin",
+    "Andrea Weatherhead",
+    "Sarah Myhre"
+];
+
 const speakers = [
     {
         "name": "John Sinclair",
