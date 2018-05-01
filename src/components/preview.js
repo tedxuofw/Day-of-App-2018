@@ -10,6 +10,7 @@ class SpeakerPreview extends Component {
             width: '100%',
             height: 'auto',
             position: 'absolute',
+			margin:'auto',
             top: ((this.props.shift) ? this.props.shift : '0') ,
         }
 		

@@ -117,8 +117,8 @@ const styles = StyleSheet.create({
         lineHeight: '200px',
         fontSize: '26px',
         fontFamily: 'Avenir',
-        marginTop: '5px',
-        marginBottom: '10px',
+        marginTop: '10px',
+        marginBottom: '20px',
         
         position: 'relative',
         overflow: 'hidden',

@@ -9,7 +9,8 @@ import Paper from 'material-ui/Paper';
 import Speaker from '../components/speaker';
 import TEDMenu from '../components/ted-menu.js';
 
-
+import speakers from '../data/data.js';
+import { speakerNames } from '../data/data.js';
 
 class Speakers extends Component {
     constructor() {
@@ -29,8 +30,27 @@ class Speakers extends Component {
 	closeMenu() {
 		this.setState({ open: false });
 	};
+	
+	getSpeaker(speaker) {
+		if (speakerNames.indexOf(speaker.name) > -1) {
+			return (<Speaker
+				name={speaker.name}
+				talk={speaker.talk}
+				description={speaker.description}
+				x="0"
+				y="-20vw"
+				img={speaker.img}
+				key={Math.random()}
+			/>);
+		} else {
+			return <div />
+		}
+	}
     
 	render() {
+		
+		var speakerlist = speakers.map(this.getSpeaker);
+		
 		return (
 
 			<MuiThemeProvider muiTheme={muiTheme}>
@@ -50,21 +70,10 @@ class Speakers extends Component {
                     <Paper className={css(styles.paper)} zDepth={0} rounded={false} >
                         <b>2018 Speakers </b>
                     </Paper>
-
-                    <Speaker 
-                        name="Erin Jones" 
-                        talk="Being a Champion of Change" 
-                        
-                        company="Office of Public Instruction"
-                        role="Superintendent"
-                        
-                        description="Rin Erin Jones has been working in and around schools for the past 25 years. She has taught in a variety of environments, from predominantly African American to predominantly White to some of the most diverse communities in the nation. Erin received an award as the Most Innovative Foreign Language Teacher in 2007, while teaching French Immersion at"
-                        
-                        img="http://tedxuofw.com/media/speakers-2017/erin-jones.jpg" 
-                        x="0"
-                        y="-75px"
-                        
-                        />
+					
+					
+					{speakerlist}
+					
  
                     <TEDMenu open={this.state.open} close={this.closeMenu} />
                 </div>
