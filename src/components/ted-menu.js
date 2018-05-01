@@ -51,7 +51,7 @@ class TEDMenu extends Component {
                     <Link className={css(styles.link)} to='/speakers'>
                         <div>Speakers</div>
                     </Link>
-                    <a className={css(styles.link)} href='quest.tedxuofw.com'>
+                    <a className={css(styles.link)} href='//quest.tedxuofw.com'>
                         <div>Scavenger Hunt</div>
                     </a>
                 </div>
