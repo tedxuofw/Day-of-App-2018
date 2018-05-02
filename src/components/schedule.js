@@ -26,7 +26,7 @@ class Schedule extends Component {
 	componentDidMount() {
 	this.timerID = setInterval(
 			() => this.tick(),
-			10000
+			60000
 		);
 	}
 	

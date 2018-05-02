@@ -28,10 +28,8 @@ class SpeakerPreview extends Component {
                         <img style={imageStyles} alt={this.props.name} src={this.props.img} />
 						
                         <div className={css(styles.overlay)}>
-                            <div className={css(styles.scheduleOverlay)}>
-                                <div><b>{this.props.name}</b></div>
-                                <div>{this.props.talk}</div>
-                            </div>
+                            <p className={css(styles.name)}>{this.props.name}</p>
+                            <p className={css(styles.talk)}>{this.props.talk}</p>
                         </div>
 						
 						<div style={style} className={css(styles.cover)}/>
@@ -84,7 +82,24 @@ const styles = StyleSheet.create({
         color: 'white',
         fontFamily: 'Avenir',
         fontSize: '13px',
-    }
+    },
+	name: {
+		fontFamily:'AvenirBlack',
+		fontSize:'16px',
+		fontWeight:'bold',
+		marginTop:'10px',
+		marginBottom:'0px',
+		marginLeft:'5%',
+		color:'white',
+	},
+	talk: {
+		fontFamily:'Avenir',
+		fontSize:'10px',
+		marginTop:'0px',
+		marginBottom:'0px',
+		marginLeft:'5%',
+		color:'white',
+	},
 });
 
 
