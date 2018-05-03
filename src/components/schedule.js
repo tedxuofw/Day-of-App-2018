@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
         left: '0',
         right: '0',
         width: '100%',
-        height: '55%',
-        maxHeight: '55%',
+        height: '65%',
+        maxHeight: '65%',
         overflowY: 'scroll',
         overflowX: 'hidden'
 	},

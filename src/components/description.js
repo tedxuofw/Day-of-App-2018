@@ -40,7 +40,7 @@ class Description extends Component {
 				<p style={gray} className={css(styles.title)}>x</p>
 				<p style={gray} className={css(styles.title)}>UofW</p>
 				<br />
-				<p style={black} className={css(styles.text)}> <span style={red}>TED</span> is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman. The annual TED Conference takes place each spring in Vancouver, British Columbia. </p>
+				<p style={black} className={css(styles.text)}> <span style={red}>TED</span> is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. </p>
 			</div>
 		);
 		var aboutTedx = (
@@ -50,7 +50,7 @@ class Description extends Component {
 				<p style={red} className={css(styles.title)}>x</p>
 				<p style={gray} className={css(styles.title)}>UofW</p>
 				<br />
-				<p style={black} className={css(styles.text)}> In the spirit of ideas worth spreading, <span style={red}>TEDx</span> is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.) </p>
+				<p style={black} className={css(styles.text)}> In the spirit of ideas worth spreading, <span style={red}>TEDx</span> is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. </p>
 			</div>
 		);
 		var aboutTedxUofW = (
@@ -108,8 +108,7 @@ const styles = StyleSheet.create({
 	textContainer: {
 		width:'100%',
 		height:'75%',
-		marginTop:'20px',
-		
+		marginTop:'50px',
 		overflowY:'scroll',
 	},
 	title: {
@@ -117,7 +116,7 @@ const styles = StyleSheet.create({
 		fontSize:'9vw',
 		marginLeft:'0px',
 		marginRight:'0px',
-		marginTop:'50px',
+		marginTop:'0px',
 		marginBottom:'15px',
 		display:'inline-block',
 	},
@@ -126,13 +125,13 @@ const styles = StyleSheet.create({
 		fontSize:'9vw',
 		marginLeft:'0px',
 		marginRight:'10px',
-		marginTop:'50px',
+		marginTop:'0px',
 		marginBottom:'15px',
 		display:'inline-block',
 	},
 	text: {
 		fontFamily: 'Avenir',
-		fontSize:'12px',
+		fontSize:'16px',
 		display:'inline-block',
 	},
 	button: {
@@ -144,7 +143,7 @@ const styles = StyleSheet.create({
 		border:'none',
 		width:'100%',
 		height:'30px',
-		marginTop:'60px',
+		marginTop:'40px',
 	},
 });
 

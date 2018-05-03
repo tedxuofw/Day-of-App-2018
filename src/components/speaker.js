@@ -112,7 +112,7 @@ const speakerDialogStyles = {
 
 const styles = StyleSheet.create({
     paper: {
-        height: '175px',
+        height: '225px',
         width: '100%',
         lineHeight: '200px',
         fontSize: '26px',
@@ -136,8 +136,9 @@ const styles = StyleSheet.create({
     overlay: {
         position: 'absolute',
         color: 'white',
-        top: '50%',
-        left: '30px',
+        top: '57%',
+        left: '8%',
+		maxWidth:'77%',
     },
     text: {
         lineHeight: '25px'

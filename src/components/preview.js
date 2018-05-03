@@ -42,7 +42,7 @@ class SpeakerPreview extends Component {
 
 const styles = StyleSheet.create({
     scheduleItem: {
-        height: '55px',
+        height: '75px',
         width: '100%',
         marginTop: '4%',
 		marginBottom: '4%',
@@ -85,19 +85,21 @@ const styles = StyleSheet.create({
     },
 	name: {
 		fontFamily:'AvenirBlack',
-		fontSize:'16px',
+		fontSize:'18px',
 		fontWeight:'bold',
 		marginTop:'10px',
 		marginBottom:'0px',
 		marginLeft:'5%',
+		marginRight:'5%',
 		color:'white',
 	},
 	talk: {
 		fontFamily:'Avenir',
-		fontSize:'10px',
+		fontSize:'14px',
 		marginTop:'0px',
 		marginBottom:'0px',
 		marginLeft:'5%',
+		marginRight:'5%',
 		color:'white',
 	},
 });

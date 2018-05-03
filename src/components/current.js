@@ -4,20 +4,22 @@ import { StyleSheet, css } from 'aphrodite';
 class SpeakerCurrent extends Component {
 	render() {
 		var speakers = this.props.speakers;
-		var speaker = speakers[speakers.length-1];
+		var speaker = {name:'Intermission', img:'/resources/tedx.jpg', talk:''};
 		for (var i = 0; i < speakers.length; i++) {
-			if (this.props.now < Date.parse(speakers[i].start)) {
+			if (this.props.now > Date.parse(speakers[i].start) 
+					&& this.props.now < Date.parse(speakers[i].end)) {
 				speaker = speakers[i];
 				break;
 			}
 		}
 		
+		
 		return (
 			<div className={css(styles.currentImage)}>
-				<img style={{width:'100%'}} alt={speaker.name} src={speaker.img} />
+				<img style={{position:'relative', width:'100%', top:'-70px'}} alt={speaker.name} src={speaker.img} />
 				<div className={css(styles.overlay)}>
 					<div className={css(styles.overlayContent)}>
-						<div className={css(styles.upnext)}>Up Next</div>
+						<div className={css(styles.upnext)}>Current Speaker</div>
 						<div className={css(styles.name)}>{speaker.name}</div>
 						<div className={css(styles.talk)}>{speaker.talk}</div>
 					</div>
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
         top: '0',
         left: '0',
         width: '100%',
-        maxHeight: '45%',
+        maxHeight: '35%',
         overflow: 'hidden',
     }, 
     overlay: {
