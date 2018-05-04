@@ -9,7 +9,6 @@ export const speakerNames = [
     "Jeffrey Lew",
     "Tyler Valentine",
     "Dr. Steve Bezruchka",
-    "Tarah Wheeler",
     "Karen Liftin",
     "Andrea Weatherhead",
     "Sarah Myhre"
@@ -134,27 +133,18 @@ const speakers = [
         "img": "/resources/bezruchka.jpg"
     },
     {
-        "name": "Tarah Wheeler",
-        "start": "May 5, 2018 14:51:00",
-        "end": "May 5, 2018 15:04:00",
-        "talk": "Cybersecurity Is Happening To You", 
-		"description":'<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.',
-        "shift": "-40vw", 
-        "img": "/resources/tarah.png"
-    },
-    {
         "name": "Karen Liftin",
-        "start": "May 5, 2018 15:14:00",
-        "end": "May 5, 2018 15:27:00",
+        "start": "May 5, 2018 15:01:00",
+        "end": "May 5, 2018 15:14:00",
         "talk":"Becoming Planetary: Reinventing Politics for the Anthropocene", 
-		"description":"Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of <em>Ozone Discourses</em>; <em>The Greening Sovereignty</em>; and <em>Ecovillages: Lessons for Sustainable Community</em>.",
+		"description":"Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of 'Ozone Discourses'; 'The Greening Sovereignty'; and 'Ecovillages: Lessons for Sustainable Community.'",
         "shift": "-33vw", 
         "img": "/resources/karen.png"
     },
     {
         "name": "Andrea Weatherhead",
-        "start": "May 5, 2018 15:27:00",
-        "end": "May 5, 2018 15:40:00",
+        "start": "May 5, 2018 15:14:00",
+        "end": "May 5, 2018 15:27:00",
         "talk": "Only Connect", 
 		"description":'Andrea has created award winning immersive environments for many museums across the country including the Experience Music Project (now called MoPOP) and the  Museum of History & Industry in Seattle. Her visionary educational and interactive exhibit environments have earned her numerous awards. Andrea was featured as the “woman to watch out for in technology in the 21st century” by Seattle Magazine and  was cited as “one of Seattle’s 36 most influential people” by Seattle Met Magazine.',
         "shift": "-39vw", 
@@ -162,8 +152,8 @@ const speakers = [
     },
     {
         "name": "Sarah Myhre",
-        "start": "May 5, 2018 15:40:00",
-        "end": "May 5, 2018 15:53:00",
+        "start": "May 5, 2018 15:27:00",
+        "end": "May 5, 2018 15:40:00",
         "talk": "Take Your Humanity With You", 
 		"description":"Dr. Myhre is a paleoceanographer and science communicator, currently researching in the UW Department of Oceanography. She organized the Seattle chapter of 500 Women Scientists and has been recognized as an active voice for women in science and society.",
         "shift": "-28vw", 
