@@ -22,13 +22,13 @@ class Schedule extends Component {
 	constructor() {
 		super();
 		
-		this.state = {date:new Date().getTime()};
+		this.state = {date:new Date().getTime(), shift:0};
 	}
 	
 	componentDidMount() {
 	this.timerID = setInterval(
 			() => this.tick(),
-			60000
+			10000
 		);
 	}
 	
@@ -37,7 +37,7 @@ class Schedule extends Component {
 	}
 	
 	tick() {
-		this.setState({date:new Date().getTime()});
+		this.setState({date:new Date().getTime() + this.state.shift*60*1000});
 	}
 
 	handleClose = () => {

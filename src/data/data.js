@@ -21,7 +21,7 @@ const speakers = [
         "end": "May 5, 2018 10:10:00",
         "talk": "", 
 		"description": "",
-        "shift": "0vw", 
+        "shift": "-20vw", 
         "img": "/resources/video.png"
     },
     {
@@ -120,7 +120,7 @@ const speakers = [
         "end": "May 5, 2018 13:28:00",
         "talk": "", 
 		"description": "",
-        "shift": "0vw", 
+        "shift": "-20vw", 
         "img": "/resources/video.png"
     },
     {
@@ -156,7 +156,7 @@ const speakers = [
         "end": "May 5, 2018 15:01:00",
         "talk": "", 
 		"description": "",
-        "shift": "0vw", 
+        "shift": "-20vw", 
         "img": "/resources/video.png"
     },
     {
