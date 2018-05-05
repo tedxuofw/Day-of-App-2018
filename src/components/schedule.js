@@ -7,6 +7,7 @@ import SpeakerCurrent from '../components/current.js';
 
 import { SpeakerModal } from "../components/speaker.js";
 
+import firebase from '../data/firebase.js';
 import speakers from '../data/data.js';
 
 //Each session's start and end time.
@@ -19,17 +20,29 @@ const sessionTimes = [[new Date(2018, 4, 5, 10, 0, 0, 0), new Date(2018, 4, 5, 1
 
 class Schedule extends Component {
 	
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		
-		this.state = {date:new Date().getTime()};
+		this.state = {
+            date: new Date().getTime(),
+            shift: 0
+        };
 	}
 	
 	componentDidMount() {
-	this.timerID = setInterval(
-			() => this.tick(),
-			60000
-		);
+        const ref = firebase.database().ref('settings/');
+        ref.on('value', (snapshot) => {
+            let obj = snapshot.val();
+            this.setState({
+                date: this.state.date,
+                shift: obj.delay 
+            });
+        });
+        
+        this.timerID = setInterval(
+            () => this.tick(),
+            10000
+        );
 	}
 	
 	componentWillUnmount() {
@@ -37,7 +50,7 @@ class Schedule extends Component {
 	}
 	
 	tick() {
-		this.setState({date:new Date().getTime()});
+		this.setState({date:new Date().getTime() + this.state.shift*60*1000});
 	}
 
 	handleClose = () => {

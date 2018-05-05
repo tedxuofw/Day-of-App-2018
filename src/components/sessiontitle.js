@@ -12,7 +12,7 @@ class SessionTitle extends Component {
 		}
 		
 		var style = {backgroundColor:'gray'}
-		if (Date.now() > this.props.times[0].getTime()) {
+		if (this.props.now > this.props.times[0].getTime()) {
 			style = {background: 'rgba(230, 43, 37, 1)'}
 		}
 		
