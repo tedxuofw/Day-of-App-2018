@@ -42,7 +42,7 @@ class Speaker extends Component {
             <div className={css(styles.paper)} >
                 <img alt={this.props.name} className={css(styles.img)} src={this.props.img} style={imageStyles} onClick={this.handleOpen}/>
                 <span className={css(styles.overlay)} onClick={this.handleOpen}>
-                    <div className={css(styles.text)} style={{textTransform: 'uppercase', fontWeight: 'bold'}}>
+                    <div className={css(styles.text)} style={{fontSize:'22px', textTransform: 'uppercase', fontWeight: 'bold'}}>
                         {this.props.name}
                     </div>
                     <div className={css(styles.text)} style={{fontSize: '18px'}}>
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
     overlay: {
         position: 'absolute',
         color: 'white',
-        top: '57%',
+        top: '65%',
         left: '8%',
 		maxWidth:'77%',
     },
     text: {
-        lineHeight: '25px'
+        lineHeight: '25px',
     },
     button: {
         position: 'absolute',

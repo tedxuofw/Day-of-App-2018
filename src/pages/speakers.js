@@ -38,7 +38,7 @@ class Speakers extends Component {
 				talk={speaker.talk}
 				description={speaker.description}
 				x="0"
-				y="-20vw"
+				y="-15vw"
 				img={speaker.img}
 				key={Math.random()}
 			/>);

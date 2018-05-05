@@ -19,7 +19,7 @@ class SpeakerCurrent extends Component {
 				<img style={{position:'relative', width:'100%', top:'-70px'}} alt={speaker.name} src={speaker.img} />
 				<div className={css(styles.overlay)}>
 					<div className={css(styles.overlayContent)}>
-						<div className={css(styles.upnext)}>Current Speaker</div>
+						<div className={css(styles.upnext)}>Current Event</div>
 						<div className={css(styles.name)}>{speaker.name}</div>
 						<div className={css(styles.talk)}>{speaker.talk}</div>
 					</div>

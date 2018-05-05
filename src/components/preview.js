@@ -27,12 +27,14 @@ class SpeakerPreview extends Component {
                     <div className={css(styles.scheduleContent)} onClick={() => { this.props.onClick(this.props.name); }}>
                         <img style={imageStyles} alt={this.props.name} src={this.props.img} />
 						
+						<div style={style} className={css(styles.cover)}/>
+						
                         <div className={css(styles.overlay)}>
                             <p className={css(styles.name)}>{this.props.name}</p>
                             <p className={css(styles.talk)}>{this.props.talk}</p>
                         </div>
 						
-						<div style={style} className={css(styles.cover)}/>
+						
                     </div>
                 </div>
 
