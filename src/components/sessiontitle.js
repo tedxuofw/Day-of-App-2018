@@ -3,11 +3,24 @@ import { StyleSheet, css } from 'aphrodite';
 
 class SessionTitle extends Component {
 	render() {
+		var subtext = "";
+		if (typeof this.props.times !== undefined) {
+			subtext = this.props.times[0].toTimeString() + " - " + this.props.times[1].toTimeString();
+		}
+		if (typeof this.props.text !== undefined) {
+			subtext=this.props.text;
+		}
+		
+		var style = {backgroundColor:'gray'}
+		if (Date.now() > this.props.times[0].getTime()) {
+			style = {background: 'rgba(230, 43, 37, 1)'}
+		}
+		
 		return (
 			<div className={css(styles.container)}> 
-				<div className={css(styles.item)}>
+				<div style={style} className={css(styles.item)}>
 					<p className={css(styles.name)}> {this.props.name} </p>
-					<p className={css(styles.time)}> {this.props.time} </p>
+					<p className={css(styles.time)}> {subtext} </p>
 				</div>
 			</div>
 		);
@@ -24,7 +37,6 @@ const styles = StyleSheet.create({
 		marginLeft: '7%',
 	},
 	item: {
-		background: 'rgba(230, 43, 37, 1)',
 		textAlign:'center',
 		position: 'relative',
         width: '86%',

@@ -3,14 +3,23 @@ import { StyleSheet, css } from 'aphrodite';
 
 class SpeakerCurrent extends Component {
 	render() {
+		var speakers = this.props.speakers;
+		var speaker = speakers[speakers.length-1];
+		for (var i = 0; i < speakers.length; i++) {
+			if (this.props.now < Date.parse(speakers[i].start)) {
+				speaker = speakers[i];
+				break;
+			}
+		}
+		
 		return (
 			<div className={css(styles.currentImage)}>
-				<img alt="Erin Jones" src="http://tedxuofw.com/media/speakers-2017/erin-jones.jpg" />
+				<img style={{width:'100%'}} alt={speaker.name} src={speaker.img} />
 				<div className={css(styles.overlay)}>
 					<div className={css(styles.overlayContent)}>
 						<div className={css(styles.upnext)}>Up Next</div>
-						<div className={css(styles.name)}>Erin Jones</div>
-						<div className={css(styles.talk)}>Being a Champion of Change</div>
+						<div className={css(styles.name)}>{speaker.name}</div>
+						<div className={css(styles.talk)}>{speaker.talk}</div>
 					</div>
 				</div>
 			</div>

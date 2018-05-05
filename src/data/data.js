@@ -1,4 +1,4 @@
-export default schedule = [
+const speakers = [
     {
         "name": "John Sinclair",
         "start": "May 5, 2018 10:10:00",
@@ -28,8 +28,8 @@ export default schedule = [
         "start": "May 5, 2018 10:49:00",
         "end": "May 5, 2018 11:01:00",
         "talk": "",
-        "shift": "",
-        "img": ""
+        "shift": "-100px",
+        "img": "/resources/aura.png"
     },
     {
         "name": "Izdihar Bailey",
@@ -52,16 +52,16 @@ export default schedule = [
         "start": "May 5, 2018 12:27:00",
         "end": "May 5, 2018 12:40:00",
         "talk": "",
-        "shift": "",
-        "img": ""
+        "shift": "-100px",
+        "img": "/resources/heather.png"
     },
     {
         "name": "Human Condition",
         "start": "May 5, 2018 12:40:00",
         "end": "May 5, 2018 12:52:00",
         "talk": "",
-        "shift": "",
-        "img": ""
+        "shift": "-100px",
+        "img": "/resources/gaultier.png"
     },
     {
         "name": "Ansel Santosa",
@@ -92,8 +92,8 @@ export default schedule = [
         "start": "May 5, 2018 14:26:00",
         "end": "May 5, 2018 14:38:00",
         "talk": "",
-        "shift": "",
-        "img": ""
+        "shift": "-100px",
+        "img": "/resources/awaaz.png"
     },
     {
         "name": "Dr. Steve Bezruchka",
@@ -136,3 +136,4 @@ export default schedule = [
         "img": "/resources/sarah.png"
     }
 ];
+export default speakers;
