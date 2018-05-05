@@ -16,6 +16,15 @@ export const speakerNames = [
 
 const speakers = [
     {
+        "name": "Video 1",
+        "start": "May 5, 2018 10:00:00",
+        "end": "May 5, 2018 10:10:00",
+        "talk": "", 
+		"description": "",
+        "shift": "0vw", 
+        "img": "/resources/video.png"
+    },
+    {
         "name": "John Sinclair",
         "start": "May 5, 2018 10:10:00",
         "end": "May 5, 2018 10:23:00",
@@ -106,6 +115,15 @@ const speakers = [
         "img": "/resources/jeffery.png"
     },
     {
+        "name": "Video 2",
+        "start": "May 5, 2018 13:18:00",
+        "end": "May 5, 2018 13:28:00",
+        "talk": "", 
+		"description": "",
+        "shift": "0vw", 
+        "img": "/resources/video.png"
+    },
+    {
         "name": "Tyler Valentine",
         "start": "May 5, 2018 13:28:00",
         "end": "May 5, 2018 13:41:00",
@@ -131,6 +149,15 @@ const speakers = [
 		"description":"Dr. Stephen Bezruchka is a Senior Lecturer in the Departments of Health Services and Global Health, with degrees from Harvard, Stanford and Johns Hopkins. His courses and research focus on population health and their socioeconomic determinants. Prior to his time at the University of Washington, he spent 30 years as an emergency physician and trained doctors in remote hospitals in Nepal. Throughout his career, he has continued to be involved with international health issues.",
         "shift":"-37vw", 
         "img": "/resources/bezruchka.jpg"
+    },
+    {
+        "name": "Video 3",
+        "start": "May 5, 2018 14:51:00",
+        "end": "May 5, 2018 15:01:00",
+        "talk": "", 
+		"description": "",
+        "shift": "0vw", 
+        "img": "/resources/video.png"
     },
     {
         "name": "Karen Liftin",

@@ -97,7 +97,7 @@ export class SpeakerModal extends Component {
                   <div className={css(styles.modalDescription)}>{this.props.description}</div>
                   
                   
-                  <button className={css(styles.modalButton)}>Ask me a Question</button>
+                  <a href={"http://qa.tedxuofw.com/#/" + this.props.name.split(" ")[0].toLowerCase()}> <button className={css(styles.modalButton)}>Ask me a Question</button> </a>
                   <div className={css(styles.modalClose)} onClick={this.props.onRequestClose}>close</div>
 
               </center>

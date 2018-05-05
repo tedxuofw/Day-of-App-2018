@@ -78,6 +78,7 @@ class Schedule extends Component {
 						now={this.state.date} 
 						title="Session 2" 
 						text="12:27 PM - 1:41 PM" 
+						onClick={this.setSpeaker}
 						times={sessionTimes[2]}
 					/>
 					
@@ -93,12 +94,13 @@ class Schedule extends Component {
 						now={this.state.date} 
 						title="Session 2" 
 						text="2:26 PM - 3:53 PM" 
+						onClick={this.setSpeaker}
 						times={sessionTimes[4]} 
 					/>
 				</div>
 
 				<SpeakerModal
-					isOpen={this.state.open}
+					isOpen={speaker && speaker.name.includes("Video") ? false : this.state.open}
 					onRequestClose={this.handleClose}
 					img={speaker ? speaker.img : ""}
 					name={speaker ? speaker.name : ""}
