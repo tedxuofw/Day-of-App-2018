@@ -22,11 +22,11 @@ class Speaker extends Component {
         Modal.setAppElement('body');
     }
     
-	handleOpen() {
+	handleOpen = () => {
 		this.setState({ open: true });
 	};
 
-	handleClose() {
+	handleClose = () => {
 		this.setState({ open: false });
 	};
     
@@ -62,36 +62,48 @@ class Speaker extends Component {
                             <path id="path0_fill" fillRule="evenodd" d="M 41.9314 4.88238L 41.9314 24.3039C 41.9314 26.9935 39.7753 29.1863 37.1414 29.1755L 15.6234 29.1755L 9.55884 36.3154C 9.18707 36.7475 8.65607 36.9959 8.10376 36.9959C 7.03107 36.9959 6.17078 36.121 6.17078 35.0408L 6.17078 29.1863L 4.80066 29.1863C 2.15607 29.1863 0 26.9935 0 24.3039L 0 4.88238C 0 2.19275 2.15607 0 4.80066 0L 37.1307 0C 39.7753 0 41.9314 2.19275 41.9314 4.88238ZM 14.0302 26.9935C 14.2851 26.7019 14.6356 26.5398 15.0179 26.5398L 37.1307 26.5398C 38.3416 26.5398 39.3292 25.5353 39.3292 24.3039L 39.3292 4.88238C 39.3292 3.65098 38.3416 2.64642 37.1307 2.64642L 4.80066 2.64642C 3.58984 2.64642 2.60211 3.65098 2.60211 4.88238L 2.60211 24.2931C 2.60211 25.5245 3.58984 26.529 4.80066 26.529L 7.45587 26.529C 8.1781 26.529 8.76227 27.1231 8.76227 27.8577L 8.76227 33.1829L 14.0302 26.9935ZM 42.4518 44.3195C 42.8235 44.7624 43.3546 45 43.8962 45C 44.1193 45 44.3529 44.9568 44.576 44.8704C 45.3407 44.5787 45.8292 43.8658 45.8292 43.0341L 45.8292 37.1796L 47.1993 37.1796C 49.844 37.1796 52 34.9868 52 32.2972L 52 12.8757C 52 10.186 49.844 7.99328 47.1993 7.99328C 46.4772 7.99328 45.8929 8.58737 45.8929 9.31109C 45.8929 10.0456 46.4772 10.6397 47.1993 10.6397C 48.4102 10.6397 49.3979 11.6443 49.3979 12.8757L 49.3979 32.2972C 49.3979 33.5286 48.4102 34.5331 47.1993 34.5331L 44.5336 34.5331C 43.8113 34.5331 43.2272 35.1272 43.2272 35.8617L 43.2272 41.187L 37.9591 34.9976C 37.7148 34.706 37.3538 34.5439 36.9714 34.5439L 17.429 34.5439C 16.7067 34.5439 16.1226 35.138 16.1226 35.8725C 16.1226 36.6071 16.7067 37.2011 17.429 37.2011L 36.3766 37.2011L 42.4518 44.3195ZM 22.5164 15.0576C 22.5164 15.9286 21.8221 16.6347 20.9657 16.6347C 20.1093 16.6347 19.415 15.9286 19.415 15.0576C 19.415 14.1866 20.1093 13.4806 20.9657 13.4806C 21.8221 13.4806 22.5164 14.1866 22.5164 15.0576ZM 26.1593 16.6347C 27.0157 16.6347 27.71 15.9286 27.71 15.0576C 27.71 14.1866 27.0157 13.4806 26.1593 13.4806C 25.3029 13.4806 24.6086 14.1866 24.6086 15.0576C 24.6086 15.9286 25.3029 16.6347 26.1593 16.6347ZM 17.3228 15.0576C 17.3228 15.9286 16.6285 16.6347 15.7721 16.6347C 14.9157 16.6347 14.2214 15.9286 14.2214 15.0576C 14.2214 14.1866 14.9157 13.4806 15.7721 13.4806C 16.6285 13.4806 17.3228 14.1866 17.3228 15.0576Z"/>
                         </defs>
                     </svg>
-
-                </span>
-                <Modal
-                  isOpen={this.state.open}
-                  onRequestClose={this.handleClose}
-                  style={speakerDialogStyles}
-                  contentLabel=""
-                >
-                    <center>
-                        <img alt={this.props.name} className={css(styles.modalImg)} src={this.props.img} />
-                        
-                        <div className={css(styles.modalName)}>{this.props.name}</div>
-                        <div className={css(styles.modalCompany)}>{this.props.company}</div>
-                        <div className={css(styles.modalRole)}>{this.props.role}</div>
-                        
-                        <hr className={css(styles.modalLine)} />
-                        <div className={css(styles.modalDescription)}>{this.props.description}</div>
-                        
-                        
-                        <button className={css(styles.modalButton)}>Ask me a Question</button>
-                        <div className={css(styles.modalClose)} onClick={this.handleClose}>close</div>
-
-                    </center>
-                </Modal>
-                
-                
-                                 
+                </span>   
+                <SpeakerModal
+                    isOpen={this.state.open}
+                    onRequestClose={this.handleClose}
+                    img={this.props.img}
+                    name={this.props.name}
+                    company={this.props.company}
+                    role={this.props.role}
+                    description={this.props.description}
+                />       
             </div>
 		);
 	}
+}
+
+export class SpeakerModal extends Component {
+    render() {
+        return (
+            <Modal
+                isOpen={this.props.isOpen}
+                onRequestClose={this.props.onRequestClose}
+                style={speakerDialogStyles}
+                contentLabel=""
+            >
+              <center>
+                  <img alt={this.props.name} className={css(styles.modalImg)} src={this.props.img} />
+                  
+                  <div className={css(styles.modalName)}>{this.props.name}</div>
+                  <div className={css(styles.modalCompany)}>{this.props.company}</div>
+                  <div className={css(styles.modalRole)}>{this.props.role}</div>
+                  
+                  <hr className={css(styles.modalLine)} />
+                  <div className={css(styles.modalDescription)}>{this.props.description}</div>
+                  
+                  
+                  <button className={css(styles.modalButton)}>Ask me a Question</button>
+                  <div className={css(styles.modalClose)} onClick={this.props.onRequestClose}>close</div>
+
+              </center>
+          </Modal>
+        );
+    }
 }
 
 const speakerDialogStyles = {

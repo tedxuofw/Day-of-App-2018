@@ -10,6 +10,7 @@ class Session extends Component {
 	render() {
 		var speakerPreviews = this.props.speakers.map((speaker, index) => (
 			<SpeakerPreview 
+				onClick={this.props.onClick}
 				name={speaker.name}
 				talk={speaker.talk}
 				time={speaker.time}
