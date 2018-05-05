@@ -37,6 +37,7 @@ class Speaker extends Component {
             left: ((this.props.x) ? this.props.x : '0') ,
         }        
         
+        let link = this.props.name === "Dr. Steve Bezruchka" ? this.props.name.split(" ")[2] : this.props.name.split(" ")[0];
         
 		return (
             <div className={css(styles.paper)}>
@@ -50,7 +51,7 @@ class Speaker extends Component {
                     </div>
                 </span>
                         
-                <a href={"http://qa.tedxuofw.com/#/" + this.props.name.split(" ")[0].toLowerCase()}>
+                <a href={"http://qa.tedxuofw.com/#/" + link.toLowerCase()}>
                     <div>
                         <span className={css(styles.button)}>
                             <svg width="22" height="25" viewBox="0 0 52 45">
@@ -83,6 +84,7 @@ class Speaker extends Component {
 
 export class SpeakerModal extends Component {
     render() {
+        let link = this.props.name === "Dr. Steve Bezruchka" ? this.props.name.split(" ")[2] : this.props.name.split(" ")[0];
         return (
             <Modal
                 isOpen={this.props.isOpen}
@@ -101,7 +103,7 @@ export class SpeakerModal extends Component {
                   <div className={css(styles.modalDescription)}>{this.props.description}</div>
                   
                   
-                  <a href={"http://qa.tedxuofw.com/#/" + this.props.name.split(" ")[0].toLowerCase()}> <button className={css(styles.modalButton)}>Ask me a Question</button> </a>
+                  <a href={"http://qa.tedxuofw.com/#/" + link.toLowerCase()}> <button className={css(styles.modalButton)}>Ask me a Question</button> </a>
                   <div className={css(styles.modalClose)} onClick={this.props.onRequestClose}>close</div>
 
               </center>

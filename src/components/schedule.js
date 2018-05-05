@@ -71,9 +71,9 @@ class Schedule extends Component {
 				<SpeakerCurrent speakers={speakers} now={this.state.date} />
 				<div className={css(styles.schedule)} >
 					<Session 
-						speakers={speakers.slice(0, 6)} 
+						speakers={speakers.slice(0, 7)} 
 						now={this.state.date} 
-						title="Session 1" 
+						title="Voyager" 
 						text="10:00 AM - 11:27 AM" 
 						onClick={this.setSpeaker}
 						times={sessionTimes[0]} 
@@ -87,9 +87,9 @@ class Schedule extends Component {
 					/>
 					
 					<Session 
-						speakers={speakers.slice(6, 12)} 
+						speakers={speakers.slice(7, 13)} 
 						now={this.state.date} 
-						title="Session 2" 
+						title="Hubble" 
 						text="12:27 PM - 1:41 PM" 
 						onClick={this.setSpeaker}
 						times={sessionTimes[2]}
@@ -103,9 +103,9 @@ class Schedule extends Component {
 					/>
 					
 					<Session 
-						speakers={speakers.slice(12, 18)} 
+						speakers={speakers.slice(13, 20)} 
 						now={this.state.date} 
-						title="Session 2" 
+						title="New Horizons" 
 						text="2:26 PM - 3:53 PM" 
 						onClick={this.setSpeaker}
 						times={sessionTimes[4]} 
