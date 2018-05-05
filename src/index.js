@@ -14,8 +14,8 @@ class App extends React.Component {
 		return (
 			<HashRouter>
 				<Switch> 
-                    <Route exact path='/' component={Landing}/>
-					<Route path='/home' component={Home}/>
+                    <Route exact path='/' component={Home}/>
+                    <Route exact path='/landing' component={Landing}/>
                     <Route path='/speakers' component={Speakers}/>
 					<Route path='/about' component={About}/>
                 </Switch>
