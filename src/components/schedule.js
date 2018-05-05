@@ -37,7 +37,6 @@ class Schedule extends Component {
                 date: this.state.date,
                 shift: obj.delay 
             });
-            console.log(this.state);
         });
         
         this.timerID = setInterval(
