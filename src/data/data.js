@@ -151,6 +151,15 @@ const speakers = [
         "img": "/resources/bezruchka.jpg"
     },
     {
+        "name": "Karen Liftin",
+        "start": "May 5, 2018 13:51:00",
+        "end": "May 5, 2018 14:04:00",
+        "talk":"Becoming Planetary: Reinventing Politics for the Anthropocene", 
+		"description":"Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of 'Ozone Discourses'; 'The Greening Sovereignty'; and 'Ecovillages: Lessons for Sustainable Community.'",
+        "shift": "-33vw", 
+        "img": "/resources/karen.png"
+    },
+    {
         "name": "Video 3",
         "start": "May 5, 2018 14:51:00",
         "end": "May 5, 2018 15:01:00",
@@ -158,15 +167,6 @@ const speakers = [
 		"description": "",
         "shift": "-20vw", 
         "img": "/resources/video.png"
-    },
-    {
-        "name": "Karen Liftin",
-        "start": "May 5, 2018 15:01:00",
-        "end": "May 5, 2018 15:14:00",
-        "talk":"Becoming Planetary: Reinventing Politics for the Anthropocene", 
-		"description":"Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of 'Ozone Discourses'; 'The Greening Sovereignty'; and 'Ecovillages: Lessons for Sustainable Community.'",
-        "shift": "-33vw", 
-        "img": "/resources/karen.png"
     },
     {
         "name": "Andrea Weatherhead",
